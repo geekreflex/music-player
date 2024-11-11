@@ -1,10 +1,8 @@
 <script setup lang="ts">
 defineProps<{ msg?: string }>();
-const name: string = "Jerry";
 </script>
 
 <template>
-  <p class="title">This is Nav by {{ name }} {{ msg }}</p>
   <div>
     <a @click="$router.go(-1)">Back</a>
     <a @click="$router.go(1)">Front</a>
@@ -13,6 +11,7 @@ const name: string = "Jerry";
     <nav>
       <RouterLink to="/">Go to Home</RouterLink>
       <RouterLink to="/auth">Go to Auth</RouterLink>
+      <RouterLink to="/profile">Go to Profile</RouterLink>
     </nav>
   </div>
 </template>
